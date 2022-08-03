@@ -1,4 +1,5 @@
-/*Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+    /*Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
@@ -6,7 +7,7 @@ You can return the answer in any order.*/
 
 import java.util.Scanner;
 
-public class TwoSum {
+public class twoSum2 {
     public static void main(String[] args) {
         int n;
         
@@ -27,10 +28,23 @@ public class TwoSum {
             nums[i] = sc.nextInt();
         }
             
-        for (int i = 0; i <= nums.length; i++) {
-           if (nums[i]+nums[i+1]==target) {
-            System.out.println("array is at index: "+ i +" and "+(i+1));
-           }
+        int start=0,end   =nums.length-1;
+        
+        while(start<end){
+                if(nums[start]+nums[end]>target){
+                      end--;
+                      if (nums[start]+nums[end]==target) {
+                        System.out.println("array is at index: "+ start +" and "+end);
+                      }
+                  }
+             else if(nums[start]+nums[end]<target){
+                    start ++;
+                    if (nums[start]+nums[end]==target) {
+                        System.out.println("array is at index: "+ start +" and "+end);
+                      }
+                 }
+                 
         }
     }
 }
+
