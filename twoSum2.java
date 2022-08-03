@@ -27,7 +27,7 @@ public class twoSum2 {
             // reading array elements from the user
             nums[i] = sc.nextInt();
         }
-            
+            //here we will check from start and end if sum of 1st and last elemt is greater than we will shift size etc etc
         int start=0,end   =nums.length-1;
         
         while(start<end){
