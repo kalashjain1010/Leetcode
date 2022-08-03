@@ -35,15 +35,16 @@ public class twoSum2 {
                       end--;
                       if (nums[start]+nums[end]==target) {
                         System.out.println("array is at index: "+ start +" and "+end);
-                      }
+                        break;
+                    }
                   }
              else if(nums[start]+nums[end]<target){
                     start ++;
                     if (nums[start]+nums[end]==target) {
                         System.out.println("array is at index: "+ start +" and "+end);
+                        break;
                       }
                  }
-                 
         }
     }
 }
